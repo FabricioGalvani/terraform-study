@@ -25,3 +25,12 @@ provider "aws" {
     }
   }
 }
+
+data "terraform_remote_state" "vpc" {
+  backend = "s3"
+  config = {
+    bucket = "fabricio-my-tf-test-bucket"
+    key    = "aws-vpc/terraform.tfstate"
+    region = "us-east-1"
+  }
+}
