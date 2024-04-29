@@ -36,3 +36,6 @@ terraform.rc
 
 # Ignore .terraform.lock.hcl
 .terraform.lock.hcl
+
+# Ignore aws-key
+aws-key*
